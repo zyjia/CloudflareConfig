@@ -29,7 +29,7 @@ return $result;
 $ipFile = 'ip/ipv4.txt';
 $ipAddresses = file($ipFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-$selectedIPs = array_rand(array_flip($ipAddresses), 1000);
+$selectedIPs = array_rand(array_flip($ipAddresses), 200);
 
 foreach ($selectedIPs as $selectedIP) {
     //$configStrings[] = generateVlessConfig($uuid, trim($selectedIP), $host, $sni);
