@@ -10,7 +10,7 @@ $ipAddresses = file($ipFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 $selectedIPs = array_rand(array_flip($ipAddresses), 50);
 
-$jsonContent = file_get_contents('https://devmahdi-site.000webhostapp.com/bot/info.json');
+$jsonContent = file_get_contents('container/info.json');
 $info = json_decode($jsonContent, true);
 $uuid = $info['uuid'] ?? '';
 $host = $info['host'] ?? '';
