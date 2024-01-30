@@ -2,21 +2,27 @@
 
 function requestAPI($url, $data) {
 
-  // 初始化curl
-  $ch = curl_init();
+// 初始化curl
+$ch = curl_init();
 
-  // 设置请求选项 
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_POST, 1);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+// 设置URL参数为GET字符串
+$get_params = http_build_query($data);
+$url = $url . '?' . $get_params;
 
-  // 执行请求
-  $result = curl_exec($ch);
+// 设置请求选项
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_HTTPGET, true); 
 
-  // 关闭curl
-  curl_close($ch);
+// 忽略SSL验证
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-  return $result;
+// 执行请求
+$result = curl_exec($ch);
+
+// 关闭curl
+curl_close($ch);
+  
+return $result;
 
 }
 
