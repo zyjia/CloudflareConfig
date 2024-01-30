@@ -25,5 +25,5 @@ jobs:
           git config --global user.name "zyjia"
           git config credential.helper store
           git add -A
-          git commit -m "New server Added ✅ - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "New server Added ✅ - $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')"
           git push
