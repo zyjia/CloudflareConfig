@@ -30,7 +30,7 @@ foreach ($selectedIPs as $selectedIP) {
    $ip = trim($selectedIP);
 
     // 调用提交IP的API
-   $result = requestAPI('https://box.glms.gq/warp/upload.php', ['ip' => $ip]);
+   $result = requestAPI('https://box.glms.gq/app/warp/upload.php', ['ip' => $ip]);
 
    echo '消息:'.$result ;
 
