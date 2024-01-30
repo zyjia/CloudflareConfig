@@ -27,7 +27,7 @@ function fetchAndSaveIPs($urls)
 
     $ipAddresses = array_values(array_unique($ipAddresses));
 
-    $file = 'ipv4.txt';
+    $file = 'ip/ipv4.txt';
 
     if (!is_writable($file)) {
         echo "File is not writable: $file";
