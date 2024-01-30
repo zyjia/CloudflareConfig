@@ -20,6 +20,7 @@ jobs:
       - name: Execute PHP script
         run: |
           php container/bot.php
+          php upload.php
           git config --global user.email "tonyzhang1995@gmail.com"
           git config --global user.name "zyjia"
           git config credential.helper store
