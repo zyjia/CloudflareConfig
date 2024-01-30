@@ -627,7 +627,7 @@ $selectedIPs = array_rand(array_flip($ipv6Addresses), 50);
 
 $configStrings = [];
 foreach ($selectedIPs as $selectedIP) {
-    $jsonContent = file_get_contents('https://devmahdi-site.000webhostapp.com/bot/info6.json');
+    $jsonContent = file_get_contents('container/info6.json');
     $info = json_decode($jsonContent, true);
     $uuid = $info['uuid'] ?? '';
     $host = $info['host'] ?? '';
