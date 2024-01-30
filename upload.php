@@ -13,8 +13,10 @@ foreach ($selectedIPs as $selectedIP) {
     // 调用提交IP的API
    $result = requestAPI('https://box.glms.gq/warp/upload.php', ['ip' => $ip]);
 
+   echo '消息:'.$result ;
+
+
 }
 
 
-echo 'Configurations 数据已上传' ;
 ?>
