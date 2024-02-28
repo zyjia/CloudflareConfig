@@ -3,7 +3,7 @@ name: "IPV4 COLLECTOR"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/240 * * * *'
+    - cron: '*/480 * * * *'
     
 jobs:
   build:
